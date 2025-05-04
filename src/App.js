@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import "./styles.css";
 import Header from "./components/Header";
@@ -27,21 +26,19 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <div className="container">
-        <Header></Header>
+    <Router>
+      <div className="App">
+        <div className="container">
+          <Header />
 
-        <Router>
-          <nav>
-            <ul>
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/watchlist">Playlist</Link>
-              </li>
-            </ul>
-          </nav>
+          <div style={{ display: "flex", gap: "20px", justifyContent: "center", margin: "20px 0" }}>
+            <Link to="/">
+              <button>Home</button>
+            </Link>
+            <Link to="/watchlist">
+              <button>Playlist</button>
+            </Link>
+          </div>
 
           <Routes>
             <Route
@@ -65,11 +62,11 @@ function App() {
               }
             ></Route>
           </Routes>
-        </Router>
-      </div>
+        </div>
 
-      <Footer></Footer>
-    </div>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
