@@ -8,7 +8,7 @@ export default function Footer(){
     return(
         <footer className='footer'>
             <p className='footer-text'>
-            © {currentYear} Bombini Guzini, All rights reserved.
+            © {currentYear} GameDux, All rights reserved.
             </p>
         </footer>
     );
